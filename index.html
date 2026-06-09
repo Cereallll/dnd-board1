@@ -1,20 +1,42 @@
-<option value="maps/dungeon.jpg">Dungeon</option>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D&D Hex Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP TOOLBAR -->
+<div id="toolbar">
+
+    <select id="mapSelect">
+        <option value="maps/forest.jpg">Forest</option>
+        <option value="maps/ship.jpg">Ship</option>
+        <option value="maps/tavern.jpg">Tavern</option>
+        <option value="maps/dungeon.jpg">Dungeon</option>
         <option value="maps/cave.jpg">Cave</option>
     </select>
 
-    <input type="file" id="uploadMap">
+    <input type="file" id="uploadMap" accept="image/*">
 
-    <button id="addToken">Add Token</button>
+    <button id="addToken">+ Token</button>
     <button id="saveBoard">Save</button>
-    <button id="clearBoard">Reset</button>
+    <button id="resetBoard">Reset</button>
 
 </div>
 
+<!-- BOARD AREA -->
 <div id="board">
-    <img id="mapImage" src="maps/forest.jpg">
+
+    <img id="mapImage" src="maps/forest.jpg" alt="map">
+
     <canvas id="hexGrid"></canvas>
+
 </div>
 
+<!-- SCRIPT (IMPORTANT: must load after elements exist) -->
 <script src="script.js"></script>
 
 </body>
